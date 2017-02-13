@@ -3,22 +3,57 @@
 <html>
 <head>
   <title> Log in - Memento </title>
+  <style>
+    h1#title {
+		font-family: cursive; 
+		font-style: italic; 
+		text-align: center; 
+		font-size: 80pt; 
+		color:white
+	}
+    form#userinfo {
+		display: inline-block;
+		text-align: center; 
+		width: 100%; 
+		opacity: 0.7; 
+		margin-bottom: 10px;
+	}
+    input.info {
+		margin-bottom: 10px; 
+		width: 250px; 
+		height: 30px; 
+		padding-left: 10px;
+	}
+    input.submit {
+		width: 265px;
+		height: 30px;
+		padding-left: 10px;
+	}
+    body {
+		background-image: url("https://static.pexels.com/photos/47426/pexels-photo-47426.jpeg"); 
+		background-size: 100%;  
+		background-repeat: no-repeat;
+	}
+    form#registration {text-align:center; opacity: 0.7;}
+  </style>
 </head>
 
 <body>
-    <h1>Memento</h1>
+    <h1 id="title">Memento</h1>
     
     <main>
-        <form>
-            <input type="text" placeholder="Email Address"> 
-            <br />
-            <input type="password" placeholder="Password"> 
+        <form id="userinfo" action="HomePage.html" method="POST">
+          <input id="email" class="info" type="text" placeholder="Email Address"> 
+          <br>
+          <input id="psw" class="info" type="password" placeholder="Password">
+          <br>
+          <input type="submit" class="submit" value="Login">
         </form>
-    
-        <button type="button">Login</button>
-        <br />
-        <button type="button">Create New Account</button>
+        <form id="registration" action="RegisterPage.html" method="GET">
+          <input type="submit" class="submit" value="Create New Account">
+        </form>
     </main>
 </body>
 
 </html>
+
