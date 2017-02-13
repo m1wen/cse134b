@@ -80,12 +80,12 @@
             margin: 10px;
         }
         
-        img#new-memory-pic {
+        img.memory-pic {
             width: 300px;
             height: 300px;
         }
         
-        td#place-info {
+        td.place-info {
             text-align: center;
             padding-left: 10px;
         }
@@ -93,13 +93,10 @@
         .field {
             width: 100%;
             margin: 5px;
+            text-align: center;
         }
-        
-        #ordinal {
-            width: 100%;
-        }
-        /* The Modal (background) */
-        
+      
+        /* The Modal (background) */      
         .modal {
             display: none;
             /* Hidden by default */
@@ -317,7 +314,7 @@
                 <table>
                     <tr>
                         <td>
-                            <img id="new-memory-pic" src="https://s-media-cache-ak0.pinimg.com/originals/f4/25/34/f425340c34c9fabe3cb60eada140e212.jpg" alt="location-pic" />
+                            <img class="memory-pic" src="https://s-media-cache-ak0.pinimg.com/originals/f4/25/34/f425340c34c9fabe3cb60eada140e212.jpg" alt="location-pic" />
                         </td>
                         <td id="place-info">
                             <form action="HomePage.html" method="POST">
@@ -329,7 +326,7 @@
                                 <br>
                                 <input class="field" type="number" placeholder="Rate Place From 1 to 10">
                                 <br>
-                                <select class="field" name="ordinal" id="ordinal">
+                                <select class="field" name="ordinal">
                                     <option value="" selected>Choose a City</option>
                                     <option value="los-angeles">Los Angeles</option>
                                     <option value="san-francisco">San Francisco</option>
@@ -337,11 +334,14 @@
                                     <option value="san-diego">San Diego</option>
                                 </select>
                                 <br>
-                                <label for="not-visited"> Not Visited</label>
-                                <input type="radio" id="not-visited" name="visited" value="false" checked>
-                                <br>
-                                <label for="visited"> Visited</label>
-                                <input type="radio" id="visited" name="visited" value="true">
+                                <div class="field">
+                                    <label for="not-visited"> Not Visited</label>
+                                    <input type="radio" id="not-visited" name="visited" value="false" checked>
+                                    <br>
+                                    <label for="visited"> Visited</label>
+                                    <input type="radio" id="visited" name="visited" value="true">
+                                </div>
+
                                 <br>
                                 <input class="field" type="submit" value="Add">
                             </form>
@@ -361,9 +361,9 @@
                 <table>
                     <tr>
                         <td>
-                            <img id="new-memory-pic" src="https://s-media-cache-ak0.pinimg.com/originals/f4/25/34/f425340c34c9fabe3cb60eada140e212.jpg" alt="location-pic" />
+                            <img class="memory-pic" src="https://s-media-cache-ak0.pinimg.com/originals/f4/25/34/f425340c34c9fabe3cb60eada140e212.jpg" alt="location-pic" />
                         </td>
-                        <td id="place-info">
+                        <td class="place-info">
                             <form action="HomePage.html" method="POST">
                                 <input class="field" type="text" placeholder="Name">
                                 <br>
@@ -373,7 +373,7 @@
                                 <br>
                                 <input class="field" type="number" placeholder="Rate Place From 1 to 10">
                                 <br>
-                                <select class="field" name="ordinal" id="ordinal">
+                                <select class="field" name="ordinal">
                                     <option value="" selected>Choose a City</option>
                                     <option value="los-angeles">Los Angeles</option>
                                     <option value="san-francisco">San Francisco</option>
@@ -381,11 +381,14 @@
                                     <option value="san-diego">San Diego</option>
                                 </select>
                                 <br>
-                                <label for="not-visited"> Not Visited</label>
-                                <input type="radio" id="not-visited" name="visited" value="false" checked>
-                                <br>
-                                <label for="visited"> Visited</label>
-                                <input type="radio" id="visited" name="visited" value="true">
+                                <div class="field">
+                                    <label for="view-not-visited"> Not Visited</label>
+                                    <input type="radio" id="view-not-visited" name="visited" value="false" checked>
+                                    <br>
+                                    <label for="view-visited"> Visited</label>
+                                    <input type="radio" id="view-visited" name="visited" value="true">
+                                </div>
+
                                 <br>
                                 <input class="field" type="submit" value="Save">
                             </form>
@@ -435,12 +438,12 @@
         span1.onclick = function() {
             modal1.style.display = "none";
         }
-		
-		 // When the user clicks anywhere outside of the modal, close it
+
+        // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
             if (event.target == modal || event.target == modal1) {
                 modal.style.display = "none";
-				modal1.style.display = "none";
+                modal1.style.display = "none";
             }
         }
     </script>
