@@ -1,106 +1,201 @@
 <!DOCTYPE html>
 <!-- Future Trips Popup -->
 <html>
+
 <head>
-  <title> Homepage - Memento </title>
+    <title> Homepage - Memento </title>
+    <link type="text/css" rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.css" />
+    <style>
+        div#header-bar {
+            border-bottom: 1px solid gray;
+            background-color: #D3D3D3;
+            margin-bottom: 50px;
+            height: 40px;
+        }
+        
+        div#memento {
+            text-align: center;
+            font-family: cursive;
+            font-style: italic;
+            font-size: 20pt;
+        }
+        
+        a#home {
+            float: left;
+        }
+        
+        div#home-button {
+            margin-left: 5px;
+            margin-top: 2px;
+        }
+        
+        main {
+            border-left: thin solid black;
+            margin-left: -10px;
+            padding-left: 20px;
+        }
+        
+        .img-panel {
+            font-weight: bold;
+            font-style: italic;
+            font-size: 18pt;
+        }
+        
+        table.img-table td img {
+            margin: 10px;
+        }
+        
+        .side-button {
+            margin-bottom: 10px;
+        }
+        
+        .centerBlock {
+            display: table;
+            margin: auto;
+        }
+    </style>
 </head>
 
 <body>
-    <button type="button"> Home </button>
-    <h1>Memento</h1>
-    <hr />
-    <nav>
-      <ul>   
-          <li><a href="/MakeMemories/">MakeMemories</a></li> 
-          <li><a href="/MyProfile/">MyProfile</a></li> 
-          <li><a href="/Settings/">Settings</a></li> 
-          <li><a href="/Logout/">Logout</a></li>
-      </ul>
-    </nav>
-    
-    <div>
-        <button type="button">LeftArrow</button>
-        <table>
-        <tr>
-            <td>
-                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw"  alt="Mountain View">
-            </td>
-            <td>
-                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw"  alt="Mountain View">
-            </td>
-            <td>
-                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw"  alt="Mountain View">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw"  alt="Mountain View">
-            </td>
-            <td>
-                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw"  alt="Mountain View">
-            </td>
-            <td>
-                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw"  alt="Mountain View">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw"  alt="Mountain View">
-            </td>
-            <td>
-                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw"  alt="Mountain View">
-            </td>
-            <td>
-                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw"  alt="Mountain View">
-            </td>
-        </tr>
-        </table>
-        
-        <button type="button">RightArrow</button>
+    <header>
+        <div id="header-bar">
+            <a id="home" href="HomePage.html">
+                <div class="btn btn-primary btn-block" id="home-button">Home</div>
+            </a>
+            <div id="memento">Memento</div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-2">
+                <nav>
+                    <div class="btn btn-primary btn-block side-button" id="make-memories-btn">
+                        Make Memories
+                    </div>
+
+                    <a href="ProfilePage.html">
+                        <div class="btn btn-primary btn-block side-button">My Profile</div>
+                    </a>
+                    <a href="LogInPage.html">
+                        <div class="btn btn-primary btn-block side-button">Logout</div>
+                    </a>
+                </nav>
+            </div>
+            <div class="col-xs-5">
+                <main>
+                    <div class="panel panel-info">
+                        <div class="panel-heading text-center img-panel">My Memories</div>
+                        <div class="panel-body centerBlock">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <button class="glyphicon glyphicon-chevron-left btn-lg btn-info"></button>
+                                    </td>
+                                    <td class="img-panel">
+                                        <table class="img-table">
+                                            <tr>
+                                                <td>
+                                                    <img class="img-responsive" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw" alt="Mountain View">
+                                                </td>
+                                                <td>
+                                                    <img class="img-responsive" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw" alt="Mountain View">
+                                                </td>
+                                                <td>
+                                                    <img class="img-responsive" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw" alt="Mountain View">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img class="img-responsive" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw" alt="Mountain View">
+                                                </td>
+                                                <td>
+                                                    <img class="img-responsive" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw" alt="Mountain View">
+                                                </td>
+                                                <td>
+                                                    <img class="img-responsive" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw" alt="Mountain View">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img class="img-responsive" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw" alt="Mountain View">
+                                                </td>
+                                                <td>
+                                                    <img class="img-responsive" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw" alt="Mountain View">
+                                                </td>
+                                                <td>
+                                                    <img class="img-responsive" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw" alt="Mountain View">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <button class="glyphicon glyphicon-chevron-right btn-lg btn-info"></button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-info">
+                        <div class="panel-heading text-center img-panel">Future Memories</div>
+                        <div class="panel-body centerBlock">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <button class="glyphicon glyphicon-chevron-left btn-lg btn-info btn-block"></button>
+                                    </td>
+                                    <td>
+                                        <table class="img-table">
+                                            <tr>
+                                                <td>
+                                                    <img class="img-responsive" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw" alt="Mountain View">
+                                                </td>
+                                                <td>
+                                                    <img class="img-responsive" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw" alt="Mountain View">
+                                                </td>
+                                                <td>
+                                                    <img class="img-responsive" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw" alt="Mountain View">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img class="img-responsive" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw" alt="Mountain View">
+                                                </td>
+                                                <td>
+                                                    <img class="img-responsive" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw" alt="Mountain View">
+                                                </td>
+                                                <td>
+                                                    <img class="img-responsive" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw" alt="Mountain View">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img class="img-responsive" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw" alt="Mountain View">
+                                                </td>
+                                                <td>
+                                                    <img class="img-responsive" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw" alt="Mountain View">
+                                                </td>
+                                                <td>
+                                                    <img class="img-responsive" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw" alt="Mountain View">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <button class="glyphicon glyphicon-chevron-right btn-lg btn-info"></button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
     </div>
 
-    <div>
-        <button type="button">LeftArrow</button>
-        <table>
-        <tr>
-            <td>
-                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw"  alt="Mountain View">
-            </td>
-            <td>
-                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw"  alt="Mountain View">
-            </td>
-            <td>
-                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw"  alt="Mountain View">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw"  alt="Mountain View">
-            </td>
-            <td>
-                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw"  alt="Mountain View">
-            </td>
-            <td>
-                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw"  alt="Mountain View">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw"  alt="Mountain View">
-            </td>
-            <td>
-                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw"  alt="Mountain View">
-            </td>
-            <td>
-                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw"  alt="Mountain View">
-            </td>
-        </tr>
-        </table>
-        
-        <button type="button">RightArrow</button>
-    </div>   
-      
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
 </body>
 
 </html>
-
