@@ -65,6 +65,15 @@
       height: 250px;
       width: 250px;
     }
+	body {
+        background-image: url("http://i.imgur.com/3dBWFSi.jpg");
+        background-repeat: no-repeat;
+		width: 100%;
+		height: auto;
+    }
+	span#name, span#achievements {
+		color: white;
+	}
   </style>
 </head>
 
@@ -85,14 +94,14 @@
                  <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw"  alt="Mountain View" id="pf-pic">
               </td>
               <td id="user-info">
-                 Name Of User <br>
+                 <span id="name">Name Of User</span> <br>
                  <textarea id="info"> Please add a short bio about yourself!</textarea>
               </td>
             </tr>
           </table>
         </div>
         <div>
-        Achievements
+        <span id="achievements">Achievements</span>
           <table id="achievements-table">
             <tr>
               <td><img src="http://www.clipartkid.com/images/120/gold-metal-seal-or-stamp-with-gold-metal-seal-or-stamp-with-banner-sLXuHW-clipart.jpg" alt="achievement" class="achievement-image"></td>
