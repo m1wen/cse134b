@@ -53,6 +53,15 @@
             display: table;
             margin: auto;
         }
+        
+        td.place-info {
+            padding-left: 30px;
+        }
+        
+        img.memory-pic {
+            width: 225px;
+            height: 250px;
+        }
     </style>
 </head>
 
@@ -70,7 +79,7 @@
         <div class="row">
             <div class="col-xs-2">
                 <nav>
-                    <div class="btn btn-primary btn-block side-button" id="make-memories-btn">
+                    <div class="btn btn-primary btn-block side-button" id="make-memories-btn" data-toggle="modal" data-target="#addEntry">
                         Make Memories
                     </div>
 
@@ -96,7 +105,7 @@
                                         <table class="img-table">
                                             <tr>
                                                 <td>
-                                                    <img class="img-responsive" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw" alt="Mountain View">
+                                                    <img class="img-responsive" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw" alt="Mountain View" data-toggle="modal" data-target="#editEntry">
                                                 </td>
                                                 <td>
                                                     <img class="img-responsive" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSU65VKl6b2SsfdW4lggc_3qHyAfNn7AlTrsoOKxo72_Mw9jMtOKWFolsw" alt="Mountain View">
@@ -194,6 +203,114 @@
         </div>
     </div>
 
+    <!-- Modals -->
+    <!-- Edit Entry Modal -->
+    <div class="modal fade" id="editEntry" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Seattle</h4>
+                </div>
+                <div class="modal-body">
+                    <table>
+                        <tr>
+                            <td>
+                                <img class="memory-pic" src="https://s-media-cache-ak0.pinimg.com/originals/f4/25/34/f425340c34c9fabe3cb60eada140e212.jpg" alt="location-pic" />
+                            </td>
+                            <td class="place-info">
+                                <form action="HomePage.html" method="POST">
+                                    <input class="field" type="text" placeholder="Name">
+                                    <br>
+                                    <input class="field" type="text" placeholder="Tags">
+                                    <br>
+                                    <input class="field" type="text" placeholder="Description">
+                                    <br>
+                                    <input class="field" type="number" placeholder="Rate Place From 1 to 10">
+                                    <br>
+                                    <select class="field" name="ordinal">
+                            <option value="" selected>Choose a City</option>
+                            <option value="los-angeles">Los Angeles</option>
+                            <option value="san-francisco">San Francisco</option>
+                            <option value="sacramento">Sacramento</option>
+                            <option value="san-diego">San Diego</option>
+                        </select>
+                                    <br>
+                                    <div class="field">
+                                        <label for="view-not-visited"> Not Visited</label>
+                                        <input type="radio" id="view-not-visited" name="visited" value="false" checked>
+                                        <br>
+                                        <label for="view-visited"> Visited</label>
+                                        <input type="radio" id="view-visited" name="visited" value="true">
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END- Edit Entry Modal -->
+    
+    <!-- Add Entry Modal -->
+    <div class="modal fade" id="addEntry" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Please Enter A City</h4>
+                </div>
+                <div class="modal-body">
+                    <table>
+                        <tr>
+                            <td>
+                                <img class="memory-pic" src="https://s-media-cache-ak0.pinimg.com/originals/f4/25/34/f425340c34c9fabe3cb60eada140e212.jpg" alt="location-pic" />
+                            </td>
+                            <td class="place-info">
+                                <form action="HomePage.html" method="POST">
+                                    <input class="field" type="text" placeholder="Name">
+                                    <br>
+                                    <input class="field" type="text" placeholder="Tags">
+                                    <br>
+                                    <input class="field" type="text" placeholder="Description">
+                                    <br>
+                                    <input class="field" type="number" placeholder="Rate Place From 1 to 10">
+                                    <br>
+                                    <select class="field" name="ordinal">
+                            <option value="" selected>Choose a City</option>
+                            <option value="los-angeles">Los Angeles</option>
+                            <option value="san-francisco">San Francisco</option>
+                            <option value="sacramento">Sacramento</option>
+                            <option value="san-diego">San Diego</option>
+                        </select>
+                                    <br>
+                                    <div class="field">
+                                        <label for="view-not-visited"> Not Visited</label>
+                                        <input type="radio" id="view-not-visited" name="visited" value="false" checked>
+                                        <br>
+                                        <label for="view-visited"> Visited</label>
+                                        <input type="radio" id="view-visited" name="visited" value="true">
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Add Memory</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END- Add Entry Modal -->
+    
+    <!-- END- Modals -->
     <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
     <script type="text/javascript" src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
 </body>
